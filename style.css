@@ -1,0 +1,529 @@
+/* ===============================
+   ROYAL FLORAL WEDDING THEME
+=============================== */
+
+:root{
+
+--sage:#8DAA91;
+--gold:#C8A96A;
+--white:#ffffff;
+--mauve:#D7C4CE;
+--dark:#2d2d2d;
+--shadow:0 15px 40px rgba(0,0,0,.15);
+
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+font-family:'Poppins',sans-serif;
+background:#faf8f5;
+color:var(--dark);
+overflow-x:hidden;
+
+}
+
+/* ===============================
+LOADER
+=============================== */
+
+#loader{
+
+position:fixed;
+inset:0;
+background:white;
+display:flex;
+align-items:center;
+justify-content:center;
+z-index:99999;
+
+transition:.8s;
+
+}
+
+.loader-content{
+
+text-align:center;
+
+}
+
+.loader-logo{
+
+font-family:'Cormorant Garamond',serif;
+font-size:70px;
+font-weight:bold;
+color:var(--gold);
+
+}
+
+.loader-logo span{
+
+margin:0 10px;
+
+}
+
+.loader-line{
+
+margin:25px auto;
+height:2px;
+width:180px;
+background:linear-gradient(to right,transparent,var(--gold),transparent);
+
+animation:loading 2s infinite;
+
+}
+
+@keyframes loading{
+
+0%{width:0;}
+
+100%{width:180px;}
+
+}
+
+/* ===============================
+INTRO
+=============================== */
+
+#intro{
+
+height:100vh;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+background:
+
+linear-gradient(rgba(255,255,255,.92),rgba(255,255,255,.92)),
+
+url('assets/images/floral-bg.jpg') center/cover;
+
+}
+
+/* ===============================
+ENVELOPE
+=============================== */
+
+.envelope-wrapper{
+
+position:relative;
+
+cursor:pointer;
+
+}
+
+.envelope{
+
+width:380px;
+
+height:250px;
+
+background:#fff;
+
+border-radius:8px;
+
+box-shadow:var(--shadow);
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.envelope-top{
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:120px;
+
+background:var(--sage);
+
+clip-path:polygon(0 0,100% 0,50% 100%);
+
+}
+
+.envelope-bottom{
+
+position:absolute;
+
+bottom:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:white;
+
+}
+
+.letter-preview{
+
+position:absolute;
+
+top:70px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+text-align:center;
+
+}
+
+.letter-preview h2{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:36px;
+
+color:var(--gold);
+
+}
+
+.wax-seal{
+
+position:absolute;
+
+left:50%;
+
+top:50%;
+
+transform:translate(-50%,-50%);
+
+width:90px;
+
+height:90px;
+
+border-radius:50%;
+
+background:var(--gold);
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+color:white;
+
+font-weight:bold;
+
+z-index:100;
+
+box-shadow:0 8px 20px rgba(0,0,0,.25);
+
+transition:.4s;
+
+}
+
+.wax-seal:hover{
+
+transform:translate(-50%,-50%) scale(1.08);
+
+}
+
+/* ===============================
+HERO
+=============================== */
+
+.hero{
+
+height:100vh;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.hero img{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+}
+
+.overlay{
+
+position:absolute;
+
+inset:0;
+
+background:rgba(0,0,0,.45);
+
+}
+
+.hero-content{
+
+position:absolute;
+
+left:50%;
+
+top:50%;
+
+transform:translate(-50%,-50%);
+
+text-align:center;
+
+color:white;
+
+width:90%;
+
+}
+
+.hero-content h1{
+
+font-size:75px;
+
+font-family:'Cormorant Garamond',serif;
+
+font-weight:600;
+
+}
+
+.hero-content span{
+
+font-size:45px;
+
+display:block;
+
+margin:10px 0;
+
+color:var(--gold);
+
+}
+
+.hero-content p{
+
+font-size:20px;
+
+margin:20px 0;
+
+}
+
+/* ===============================
+BUTTON
+=============================== */
+
+.btn{
+
+display:inline-block;
+
+padding:15px 38px;
+
+background:var(--gold);
+
+color:white;
+
+text-decoration:none;
+
+border-radius:50px;
+
+transition:.35s;
+
+}
+
+.btn:hover{
+
+transform:translateY(-3px);
+
+}
+
+/* ===============================
+COUNTDOWN
+=============================== */
+
+.countdown{
+
+padding:100px 20px;
+
+text-align:center;
+
+}
+
+.countdown h2{
+
+font-size:50px;
+
+font-family:'Cormorant Garamond',serif;
+
+margin-bottom:50px;
+
+}
+
+#timer{
+
+display:flex;
+
+justify-content:center;
+
+gap:30px;
+
+flex-wrap:wrap;
+
+}
+
+#timer div{
+
+background:white;
+
+padding:35px;
+
+min-width:140px;
+
+border-radius:20px;
+
+box-shadow:var(--shadow);
+
+}
+
+#timer span{
+
+font-size:48px;
+
+color:var(--gold);
+
+font-weight:bold;
+
+}
+
+/* ===============================
+DETAILS
+=============================== */
+
+.details{
+
+padding:120px 20px;
+
+background:#fff;
+
+text-align:center;
+
+}
+
+.details h2{
+
+font-size:50px;
+
+font-family:'Cormorant Garamond',serif;
+
+margin-bottom:60px;
+
+}
+
+.card{
+
+max-width:500px;
+
+margin:25px auto;
+
+padding:35px;
+
+background:#fafafa;
+
+border-radius:20px;
+
+box-shadow:var(--shadow);
+
+}
+
+.card h3{
+
+color:var(--gold);
+
+margin-bottom:15px;
+
+}
+
+/* ===============================
+FOOTER
+=============================== */
+
+footer{
+
+padding:120px 20px;
+
+background:var(--sage);
+
+text-align:center;
+
+color:white;
+
+}
+
+footer h2{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:52px;
+
+margin-bottom:20px;
+
+}
+
+/* ===============================
+RESPONSIVE
+=============================== */
+
+@media(max-width:768px){
+
+.hero-content h1{
+
+font-size:52px;
+
+}
+
+.countdown h2,
+.details h2,
+footer h2{
+
+font-size:38px;
+
+}
+
+#timer{
+
+gap:15px;
+
+}
+
+#timer div{
+
+min-width:120px;
+
+padding:25px;
+
+}
+
+.envelope{
+
+width:320px;
+
+height:210px;
+
+}
+
+}
